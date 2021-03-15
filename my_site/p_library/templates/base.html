@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static "bootstrap.min.css" %}">
+    <title>БИБЛИОТЕКА</title>
+</head>
+<body>
+    <main>
+        {% if user.is_authenticated %}
+        <ul>
+            <li><a href="http://127.0.0.1:8000/">Главная</a></li>
+            <li><a href="http://127.0.0.1:8000/books/">Библиотека</a></li>
+            <li><a href="http://127.0.0.1:8000/publishinghouses/">Издательства</a></li>
+            <li><a href="http://127.0.0.1:8000/friends-list/">Читатели</a></li>
+            <li><a href="http://127.0.0.1:8000/admin/">Администратор</a></li>
+        </ul>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

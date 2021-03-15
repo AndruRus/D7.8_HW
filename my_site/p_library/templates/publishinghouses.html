@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+    {% load static %}
+
+    {% block content %}
+
+    <h1 class="d-flex justify-content-center">{{ title }}</h1>
+        {% for pub_house in publishinghouses %}
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h3 class="d-flex justify-content-center">{{ pub_house.name }}</h3>
+                    <ul class="list-group">
+                        {% for book in pub_house.books.all %}
+                            <li class="list-group-item">
+                                <p>Автор: {{ book.author.full_name }} - "Книга: {{ book.title }}"</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+        {% endfor %}
+
+    {% endblock %}

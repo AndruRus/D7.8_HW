@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="  UTF-8">
+    <!-- Bootstrap CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static "bootstrap.min.css" %}">
+    <title>Форма создания нескольких авторов</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ author_formset.management_form }}
+        {% for form in author_formset %}
+        {{ form.as_ul }}
+
+        <br>
+        {% endfor %}
+        <input type="submit" value="Сохранить"/>
+    </form>
+</body>
+</html>

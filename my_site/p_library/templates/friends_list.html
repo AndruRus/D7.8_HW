@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+    {% load static %}
+
+    {% block content %}
+
+        <h1 class="d-flex justify-content-center">Книги взятые друзьями</h1>
+            <br>
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                            {% for whentook in my_list %}
+                                <li class="list-group-item">
+                                    <p>{{ whentook }}</p>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+            </div>
+
+{% endblock %}
