@@ -6,7 +6,7 @@ Cайт на Django
 Регистрация возможна через пользовательский интерфейс GitHub
 
 ## Инструкция
-* Скачайте архив сайта по ссылке https://github.com/AndruRus/moduleD5_homework/archive/main.zip. 
+* Скачайте архив сайта по ссылке https://github.com/AndruRus/D7.8_HW/archive/main.zip
 *Распакуйте архив
 * Создайте виртуальное окружение для проекта
 * Для того чтобы быстро установить все требуемые библиотеки python в новом окружении достаточно выполнить команду "pip install -r requirements.txt"
